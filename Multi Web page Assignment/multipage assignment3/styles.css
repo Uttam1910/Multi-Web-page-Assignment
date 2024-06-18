@@ -1,0 +1,300 @@
+/* Common styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eaf6f6;
+    color: #333;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    /* background-color: #fff; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    color: #00b894;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Home page styles */
+section.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #eaf6f6;
+    position: relative;
+}
+
+section.home .content {
+    max-width: 50%;
+    position: relative;
+    z-index: 1; /* Make sure content is above the background images */
+}
+
+section.home .content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+section.home .content p {
+    font-size: 1.1em;
+    color: #666;
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+section.home .content button {
+    padding: 15px 30px;
+    background-color: #00b894;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    }
+
+section.home .content .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160%;
+    height: 140%;
+    background: url(Assests/stethoscope.png) no-repeat center center;
+    background-size: contain;
+    z-index: -1; /*Ensure background image is behind the content*/
+}
+
+section.home .content .top-left-image {
+    position: absolute;
+    top: -50px;
+    left: -25px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+section.home .content .top-left-image img,
+section.home .content .bottom-right-image img,
+section.home .content .outside-image img {
+    width: 100%;
+    height: 100%;
+}
+
+section.home .content .bottom-right-image {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+section.home .content .outside-image {
+    position: absolute;
+    top: 220px;
+    left: 720px;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+section.home .images {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.home .images .doctor {
+    position: relative;
+    z-index: 3;
+    max-width: 50%;
+    height: auto;
+}
+
+section.home .background-images {
+    position: absolute;
+    top: 65%;
+    right: 0;
+    width: 330px; /* Adjust the size as needed */
+    height: 330px; /* Adjust the size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+section.home .background-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-40deg);
+}
+
+section.home .background-images .green-circle {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    z-index: 2;
+}
+
+section.home .background-images .yellow-circle {
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    z-index: 1;
+}
+
+/* About Us page styles */
+section.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #eaf6f6;
+    height: calc(100vh - 80px); /* Adjust according to header height */
+}
+
+section.about .content {
+    max-width: 60%;
+    text-align: center;
+}
+
+section.about .content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section.about .content p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+section.about .stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+   
+}
+
+section.about .stats .stat-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(10, 3, 3, 0.951); /* Add this line for shading */   
+    text-align: center;
+    width: 150px; /* Adjust width as needed */
+}
+
+section.about .stats .stat-item h3 {
+    font-size: 2em;
+    color: #00b894;
+    margin: 0;
+}
+
+section.about .stats .stat-item p {
+    font-size: 1em;
+    color: #333;
+    margin: 10px 0 0 0;
+}
+
+/*contact*/
+
+section.contact {
+    background-color: #eaf6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the section takes up the remaining height of the page */
+    /* background-color: #f9f9f9;    */
+    padding: 70px;
+}
+
+.container {
+    /* background-color: #fff; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(14, 12, 12);
+    width: 90%;
+    /* height:100%; */
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #040404;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00b894;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius:10px;
+}
+
+button:hover {
+    background-color: #019c76;
+}
